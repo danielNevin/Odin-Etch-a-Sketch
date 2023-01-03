@@ -1,9 +1,20 @@
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .grid {
     display: flex;
     width: 960px;
     height: 960px;
-    background-color: grey;
+    background-color: black;
     justify-content: stretch;
+    border: 1px grey;
 }
 
 .column {
@@ -16,16 +27,45 @@
     flex-direction: column;
     flex: 1;
     margin: 1px;
-    background-color: white;
-    min-height: 1px;
-    min-width: 1px;
-}
-
-.rowHovered {
-    flex-direction: column;
-    flex: 1;
-    margin: 1px;
     background-color: black;
     min-height: 1px;
     min-width: 1px;
+    transition: 0s 300s;
+}
+
+.row:hover {
+    background-color: white;
+    transition-delay: 0s
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
+}
+
+.button {
+    background-color: #e20202df; /* Green */
+    border: 2px;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0 9px rgb(103, 103, 103);
+    border: 2px;
+}
+
+.button:hover {
+    background-color: #ad0000
+}
+
+.button:active {
+    background-color: #ad0000;
+    box-shadow: 0 5px rgb(103, 103, 103);
+    transform: translateY(4px);
 }
